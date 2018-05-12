@@ -1,0 +1,14 @@
+<h1> Insert Champion </h1>
+
+<%=form_for(@champion) do |ff| %>
+
+Name: <%= ff.text_field :name %> <br />
+
+Owned: <%= ff.check_box :owned %> <br />
+
+Rp_cost: <%= ff.text_field :rp_cost %> <br />
+
+Be_cost: <%= ff.text_field :be_cost %> <br />
+
+<%= ff.submit %>
+<%end%>

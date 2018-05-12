@@ -1,0 +1,24 @@
+<h1>Champion</h1>
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>owned</th>
+    <th>rp_cost</th>
+    <th>be_cost</th>
+    <th>skins</th>
+  </tr>
+  <% @champions.each { |ch| %>
+  <tr>
+    <td> <%= ch.name %> </td>
+    <td> <%= ch.owned %> </td>
+    <td> <%= ch.rp_cost.round %> </td>
+    <td> <%= ch.be_cost.round %> </td>
+    <td> <ul> <% ch.skins.each { |sk| %>
+          <li> <%= sk.name %> </li>
+          <% } %> </ul> </td>
+  </tr>
+<%}%>
+</table>
+
+<%= link_to "Add champion", new_champion_path %>
